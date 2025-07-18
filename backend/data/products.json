@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Relaxation Tea",
+    "category": "relaxation",
+    "price": 12.99,
+    "description": "A soothing herbal tea blend designed for relaxation and stress relief.",
+    "ingredients": {
+      "Chamomile": "Mild, floral aroma; known for calming effects (common effects: relaxation, improved sleep)",
+      "Lavender": "Floral herb with sedative properties (common effects: stress relief, relaxation)"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Deep Sleep Gummies",
+    "category": "sleep",
+    "price": 15.99,
+    "description": "Melatonin and magnesium gummies to support deep, restful sleep.",
+    "ingredients": {
+      "Melatonin": "Natural sleep hormone (common effects: improved sleep cycle)",
+      "Magnesium": "Calms nerves and muscles (common effects: reduced anxiety, deeper sleep)"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Keto Boost Capsules",
+    "category": "diet",
+    "price": 18.99,
+    "description": "Supports a ketogenic diet with BHB salts for energy and metabolism.",
+    "ingredients": {
+      "BHB Salts": "Boosts ketone levels (common effects: increased energy, fat burning)"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Weight Management Shake",
+    "category": "weight",
+    "price": 24.99,
+    "description": "Meal replacement shake to support weight control and fullness.",
+    "ingredients": {
+      "Whey Protein": "Helps build muscle (common effects: fullness, fat loss)",
+      "Fiber": "Improves digestion (common effects: satiety, gut health)"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Libido Support Capsules",
+    "category": "sex",
+    "price": 22.69,
+    "description": "Natural herbs to support libido and hormonal balance.",
+    "ingredients": {
+      "Maca Root": "Enhances libido (common effects: energy, sexual wellness)",
+      "Tribulus": "May support testosterone (common effects: improved desire)"
+    }
+  }
+]
