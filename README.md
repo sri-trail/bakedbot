@@ -1,153 +1,82 @@
-AI-Powered Product Recommendation System with RAG
+BakedBot – AI-Enhanced Product Recommendation Prototype
 Overview
-This project is a prototype AI-powered product recommendation system that uses Retrieval-Augmented Generation (RAG) techniques to provide personalized and context-aware product recommendations. It is built as a full-stack application with a Node.js backend and React frontend.
 
-Users input their goal (e.g., relaxation, sleep), and the system recommends relevant products enhanced with detailed ingredient information, enabling a richer user experience.
+BakedBot is a full-stack web application that demonstrates applied AI integration using a lightweight retrieval-augmented recommendation pipeline. The system generates goal-based product recommendations enriched with contextual ingredient information to improve user relevance and clarity.
 
-Features
-Backend API with endpoints to:
+Users provide a goal (e.g., relaxation, sleep), and the system retrieves relevant products, augments descriptions with ingredient benefits, and returns structured recommendations via a REST API.
 
-Retrieve product recommendations based on user goals
+Architecture
 
-Enhance product descriptions with ingredient details (RAG)
+Frontend (React) → REST API (Node.js / Express) → Retrieval Logic → Context Augmentation → Response
 
-Basic Recommendation Algorithm filtering products by matching effects/goals
+Key Features
 
-Retrieval-Augmented Generation (RAG) augmentation combining product and ingredient info
+Goal-based product recommendation filtering
 
-React Frontend to accept user input and display recommended products with augmented descriptions
+Context augmentation using ingredient metadata
 
-Simple error handling and input validation
+Lightweight retrieval-augmented response pipeline
 
-Tech Stack
-Backend: Node.js, Express
+Clean REST API architecture
 
-Frontend: React.js (created with Create React App)
+Modular route structure
 
-Data: Mock JSON datasets for products, ingredients, and sales
+Error handling and input validation
 
-How to Run
-Prerequisites
-Node.js (v14 or above recommended)
+Cloud-deployable full-stack structure
 
-npm or yarn
+Technical Stack
 
-Backend Setup
-Navigate to the backend folder:
+Backend:
 
-bash
-Copy
-Edit
-cd backend
-Install dependencies:
+Node.js
 
-bash
-Copy
-Edit
-npm install
-Start the backend server:
+Express.js
 
-bash
-Copy
-Edit
-node server.js
-The backend runs on http://localhost:3001 by default.
+RESTful API design
 
-Frontend Setup
-Navigate to the frontend folder:
+CORS configuration
 
-bash
-Copy
-Edit
-cd frontend
-Install dependencies:
+Frontend:
 
-bash
-Copy
-Edit
-npm install
-Start the frontend server:
+React.js
 
-bash
-Copy
-Edit
-npm start
-The frontend runs on http://localhost:3000 by default and connects to the backend.
+Axios for API communication
+
+Data Layer:
+
+Structured JSON datasets (products, ingredients, sales)
+
+Deployment:
+
+Render (frontend + backend ready)
 
 API Endpoints
-GET /recommendations?goal=your_goal
 
-Returns products that match the given goal with augmented ingredient information.
+GET /recommendations?goal=<goal>
+Returns recommended products with augmented ingredient context.
 
-Example:
-
-bash
-Copy
-Edit
-GET http://localhost:3001/recommendations?goal=relaxation
 GET /products
+Returns all product data.
 
-Returns all product data (optional).
+Engineering Design Decisions
 
-Assumptions & Simplifications
-The recommendation algorithm is basic: products are filtered by matching effect/goal.
+Modular route separation for scalability
 
-The RAG augmentation only combines product description with ingredient properties.
+Lightweight retrieval logic prioritizing explainability
 
-No authentication or user profiles are implemented.
+Context augmentation to simulate RAG-inspired architecture
 
-Sales data is present but not actively used for recommendation ranking.
+Separation of frontend and backend for clean deployment
 
-Dataset is small and mocked as JSON files instead of a database.
+Future Improvements
 
-Frontend focuses on functionality over styling and advanced UX.
+Replace keyword filtering with embedding-based semantic retrieval
 
-Approach & Design Decisions
-Recommendation Algorithm: Simple filter by product effects aligned with user input.
+Integrate vector database (e.g., Pinecone, FAISS)
 
-RAG Implementation: Retrieval of ingredient info and concatenation into an augmented description provides richer context.
+Personalization using user interaction data
 
-Frontend: Minimal UI to allow quick testing of goals and display results clearly.
+Ranking system using sales and engagement metrics
 
-Backend: Express with CORS enabled to serve API endpoints consumed by React frontend.
-
-Potential Improvements
-Integrate real AI/ML recommendation models using user interaction history.
-
-Use sales and user rating data to rank and personalize recommendations.
-
-Expand RAG system to query a vector store or knowledge base dynamically.
-
-Add more user inputs (e.g., diet preferences, allergies) for better personalization.
-
-Improve frontend UX with filters, multi-select goals, and loading states.
-
-Use a real database (e.g., PostgreSQL, MongoDB) instead of JSON files.
-
-Add authentication and user profile management.
-
-Project Structure
-kotlin
-Copy
-Edit
-backend/
-  ├── data/
-  │    ├── products.json
-  │    ├── ingredients.json
-  │    └── sales.json
-  ├── routes/
-  │    ├── recommendations.js
-  │    └── products.js
-  ├── server.js
-  └── package.json
-
-frontend/
-  ├── src/
-  │    ├── App.js
-  │    └── ...
-  ├── public/
-  ├── package.json
-  └── ...
-Contact
-For any questions or clarifications, feel free to reach out.
-# bakedbot
+Add authentication and user profiles
